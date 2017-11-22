@@ -7,6 +7,6 @@
  *
  * @author fabed2976
  */
-public class Controller {
+public class Scene {
     
 }
