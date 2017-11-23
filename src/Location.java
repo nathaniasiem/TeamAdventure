@@ -11,7 +11,13 @@
  * @author fabed2976
  */
 public class Location {
+    private String[] locationName;
+    private boolean userLocation;
     
+    public Location (){
+        
+        
+    }
 
         }
     
