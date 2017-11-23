@@ -12,6 +12,7 @@
  */
 public class Location {
     private String[] locationName;
+    private String[] locationImage;
     private boolean userLocation;
     
     public Location (){
