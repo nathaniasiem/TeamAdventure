@@ -19,6 +19,10 @@ public class Location {
         
         
     }
+    public String[] Lname(String locateName){
+        return this.locationName;
+    }
+    
 
         }
     
