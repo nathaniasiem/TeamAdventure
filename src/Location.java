@@ -1,4 +1,8 @@
 
+import java.io.FileReader;
+import java.net.URL;
+
+
 
 
 /*
@@ -13,16 +17,28 @@
 public class Location {
     private String[] locationName;
     private String[] locationImage;
-    private boolean userLocation;
     
     public Location (){
-        
-        
+         //create a blank file reader
+        FileReader file = null;
+        try{
+            URL url= Location.class.getResource("pics.txt");
+        System.out.println(url); 
+        file= new FileReader(url.getFile());
+         }catch (Exception e){
+             //handle any errors
+            //print out the lovely red errors
+            e.printStackTrace();
+            
+         }
     }
     public String[] Lname(String locateName){
         return this.locationName;
     }
-    
+    public String[]Limg(String locationImage){
+        return this.locationImage;
+    }
+
 
         }
     
