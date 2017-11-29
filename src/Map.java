@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -12,6 +15,8 @@ public class Map {
     private String initialLocation;
     private String initialDirection;
     
+    private ArrayList<Location> locations;
+    
     public Map(){
         
     }
@@ -25,5 +30,13 @@ public class Map {
         return initialDirection;
     }
     
-    //public get Screen
+    //public get Screen(String findLocation, String findDirection){
+    //for(Location loc: this.locations){
+    //if(loc.getName().equals(findLocation)){
+    //return loc.getScreen(findDirection);
+    //}
+    //}
+    //return null;
+    
 }
+
