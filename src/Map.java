@@ -9,4 +9,21 @@
  */
 public class Map {
     
+    private String initialLocation;
+    private String initialDirection;
+    
+    public Map(){
+        
+    }
+    
+    public String getIntialLocation(){
+        return initialLocation;
+        
+    }
+    
+    public String getInitialDirection(){
+        return initialDirection;
+    }
+    
+    //public get Screen
 }
