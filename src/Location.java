@@ -15,9 +15,12 @@ import java.net.URL;
  * @author fabed2976
  */
 public class Location {
+    //created instance variables available throughout program
+    //indicates the location name and image
     private String[] locationName;
     private String[] locationImage;
     
+    //method to read the text file of locations
     public Location (){
          //create a blank file reader
         FileReader file = null;
@@ -32,9 +35,13 @@ public class Location {
             
          }
     }
+    
+    //call location name
     public String[] Lname(String locateName){
         return this.locationName;
     }
+    
+    //call image of the location
     public String[]Limg(String locationImage){
         return this.locationImage;
     }
