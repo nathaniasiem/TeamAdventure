@@ -10,6 +10,7 @@
 public class Screen {
     public boolean isBlocked;
     public String currentLocation;
+    public String nextLocation;
     public String direction;
     
     public String cLocation(String user){
@@ -19,6 +20,9 @@ public class Screen {
     }
     public String getDirection (String direction){
         return direction;
+    }
+    public String getNextLocation (String nextLocation){
+        return nextLocation;
     }
     
 }

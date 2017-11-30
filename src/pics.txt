@@ -1,25 +1,25 @@
 Caf1
 N
 Upstairs1
-N IMG_0045.JPG false Downstairs S
-E IMG_0046.JPG true
-S IMG_0047.JPG false Upstairs2 S
-W IMG_0049.JPG true
+N false Downstairs S
+E true
+S false Upstairs2 S
+W true
 Upstairs2
-N IMG_0050.JPG false Upstairs1 N
-E IMG_0051.JPG true
-S IMG_0052.JPG false Upstairs3 S
-W IMG_0053.JPG true
+N false Upstairs1 N
+E true
+S false Upstairs3 S
+W true
 Upstairs3
-N IMG_0054.JPG false Upstairs2 N
-E IMG_0055.JPG false Glass E
-S IMG_0056.JPG true
-W IMG_0057.JPG false Math1 W
+N false Upstairs2 N
+E false Glass E
+S true
+W false Math1 W
 Math1
-N IMG_0058.JPG true
-E IMG_0059.JPG false Upstairs3 E
-S IMG_0060.JPG true
-W IMG_0062.JPG false Math2 W
+N true
+E false Upstairs3 E
+S true
+W false Math2 W
 Math2
 N IMG_0063.JPG true
 E IMG_0064.JPG false Math1 E
