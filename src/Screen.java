@@ -16,7 +16,9 @@ public class Screen {
         return currentLocation;
     }
     public boolean block (String isBlocked){
-        
+    }
+    public String getDirection (String direction){
+        return direction;
     }
     
 }
