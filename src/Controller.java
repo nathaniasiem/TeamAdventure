@@ -44,10 +44,21 @@ public class Controller {
     
     public void turnSouth(){
         direction = "S";
+        //Screen current = map.getScreen(location, direction);
+        
+       //gui.setImage(current.getImage());
+       //gui.setLabel();
+       //gui.setBlocked(current.isBlocked);
     }
     
     public void turnEast(){
         direction = "E";
+        
+         //Screen current = map.getScreen(location, direction);
+        
+        //gui.setImage(current.getImage());
+        //gui.setLabel();
+        //gui.setBlocked(current.isBlocked);
 
     }
     
