@@ -8,12 +8,20 @@
  * @author fabed2976
  */
 public class GUI extends javax.swing.JFrame {
+    
+    //Create the constant to be used
+    private Controller controller;
 
     /**
      * Creates new form GUI
      */
+    
     public GUI() {
         initComponents();
+    }
+    
+    public void setController(Controller c){
+        controller = c;
     }
 
     /**
@@ -85,6 +93,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void ForwardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ForwardButtonActionPerformed
         // TODO add your handling code here:
+        controller.goForward();
     }//GEN-LAST:event_ForwardButtonActionPerformed
 
     private void RightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RightButtonActionPerformed
