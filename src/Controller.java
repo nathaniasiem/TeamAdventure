@@ -18,18 +18,25 @@ public class Controller {
     public Controller(){
 
     }
-    
+    /**
+     * Get the users location on the map
+     * @return the location
+     */
     public String getLocation(){
         return location;
     }
     
+    /**
+     * Get the users direction on the map
+     * @return the direction
+     */
     public String getDirection(){
         return direction;
     }
     
-    //a method to allow the user to turn north 
-    //find a new screen
-    //ask the user if it is blocked ot not
+    /**
+     * Method to allow the user to turn north 
+     */ 
     public void turnNorth(){
         direction = "N";
         
@@ -42,6 +49,9 @@ public class Controller {
   
     }
     
+    /**
+     * Method to allow the user to turn south
+     */
     public void turnSouth(){
         direction = "S";
         //Screen current = map.getScreen(location, direction);
@@ -51,6 +61,9 @@ public class Controller {
        //gui.setBlocked(current.isBlocked);
     }
     
+    /**
+     * Method to allow the user to turn east
+     */
     public void turnEast(){
         direction = "E";
         
@@ -62,12 +75,23 @@ public class Controller {
 
     }
     
+    /**
+     * Method to allow the user to turn west
+     */
     public void turnWest(){
        direction = "W";
        
+       
+        //Screen current = map.getScreen(location, direction);
+        
+        //gui.setImage(current.getImage());
+        //gui.setLabel();
+        //gui.setBlocked(current.isBlocked);
+       
     }
-    
-    //method to allow the user to go forward
+    /**
+     * Method to allow the user to go forward
+     */
     public void goForward(){
         // Get the screen we are on right now
         //Screen current = map.getScreen(location, direction);
