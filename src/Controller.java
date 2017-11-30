@@ -15,9 +15,31 @@ public class Controller {
     //create a String variable direction
     private String direction;
     
-    public Controller(){
+    private GUI gui;
+    
+    private Map map;
+    
+    public Controller(GUI gui, Map map){
+        this.gui = gui;
+        this.map = map;
+        
+        this.location = map.getIntialLocation();
+        this.direction = map.getInitialDirection();
+        
+        // Make sure the GUI can talk to you!
+        gui.setController(this);
 
+        // Set the starting image
+        //Screen start = map.getScreen(location, direction);
+
+        // Sets image, the the location/direction, and if it is blocked so it can be accessed in gui
+        //gui.setImage(start.getImage());
+        //gui.setScreenLabel();
+       // gui.setBlocked(start.isBlocked());
     }
+        
+        
+
     /**
      * Get the users location on the map
      * @return the location
