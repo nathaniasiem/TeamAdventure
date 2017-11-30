@@ -1,3 +1,6 @@
+
+import java.awt.image.BufferedImage;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -22,6 +25,12 @@ public class GUI extends javax.swing.JFrame {
     
     public void setController(Controller c){
         controller = c;
+    }
+    
+    public void setImage(BufferedImage img){
+       // imagePanel.setImage(img);
+        
+        
     }
 
     /**
@@ -89,6 +98,15 @@ public class GUI extends javax.swing.JFrame {
 
     private void LeftButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LeftButtonActionPerformed
         // TODO add your handling code here:
+        if(controller.getDirection().equals("N")){
+            controller.turnWest();
+        }else if(controller.getDirection().equals("S")){
+            controller.turnEast();
+        }else if(controller.getDirection().equals("E")){
+            controller.turnNorth();
+        } else if(controller.getDirection().equals("S")){
+            controller.turnSouth();
+        }
     }//GEN-LAST:event_LeftButtonActionPerformed
 
     private void ForwardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ForwardButtonActionPerformed
@@ -98,6 +116,15 @@ public class GUI extends javax.swing.JFrame {
 
     private void RightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RightButtonActionPerformed
         // TODO add your handling code here:
+        if(controller.getDirection().equals("N")){
+            controller.turnEast();
+        } else if(controller.getDirection().equals("S")){
+            controller.turnWest();
+            } else if(controller.getDirection().equals("E")){
+                controller.turnSouth();
+            } else if(controller.getDirection().equals("W")){
+                controller.turnNorth();
+            }
     }//GEN-LAST:event_RightButtonActionPerformed
 
     /**
