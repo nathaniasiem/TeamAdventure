@@ -12,20 +12,32 @@ import java.util.ArrayList;
  */
 public class Map {
     
+    //create an instance variable for the initial location
     private String initialLocation;
+    
+    //create an instance variable for the initial direction
     private String initialDirection;
     
+    //create an Array list of the location
     private ArrayList<Location> locations;
     
     public Map(){
         
     }
     
+    /**
+     * Method for getting the initial Location of the user 
+     * @return the initial location
+     */
     public String getIntialLocation(){
         return initialLocation;
         
     }
     
+    /**
+     * Method for getting the initial direction of the user
+     * @return the initial direction
+     */
     public String getInitialDirection(){
         return initialDirection;
     }
