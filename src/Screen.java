@@ -24,5 +24,4 @@ public class Screen {
     public String getNextLocation (String nextLocation){
         return nextLocation;
     }
-    
 }
