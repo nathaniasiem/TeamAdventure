@@ -22,18 +22,7 @@ public class Location {
     
     //method to read the text file of locations
     public Location (){
-         //create a blank file reader
-        FileReader file = null;
-        try{
-            URL url= Location.class.getResource("pics.txt");
-        System.out.println(url); 
-        file= new FileReader(url.getFile());
-         }catch (Exception e){
-             //handle any errors
-            //print out the lovely red errors
-            e.printStackTrace();
-            
-         }
+
     }
     
     //call location name
