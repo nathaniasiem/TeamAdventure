@@ -35,15 +35,24 @@ public class MainGame {
         Scanner in = new Scanner(file);
     }
     
+    /**
+     * A method to allow the user to go forward 
+     */
     public void goForward(){
         
     }
     
+    /**
+     * A method to allow the user to turn left
+     */
     public void turnLeft(){
         //if classNum is in bounds
        
     }
     
+    /**
+     * A method to allow the user to turn right
+     */
     public void turnRight(){
         //if the number of pictures is out of bounds
     }
