@@ -39,6 +39,8 @@ public class MainGame {
      * A method to allow the user to go forward 
      */
     public void goForward(){
+        //Location c = locations.get(getnextLocation());
+        //gui.setPictureName(c.getDescription());
         
     }
     
@@ -46,7 +48,8 @@ public class MainGame {
      * A method to allow the user to turn left
      */
     public void turnLeft(){
-        //if classNum is in bounds
+        //if classNum is in out of bounds
+        if(ImageNum > 0)
        
     }
     
@@ -68,5 +71,6 @@ public class MainGame {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        MainGame Adventure = new MainGame();
     }
 }
