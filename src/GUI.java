@@ -13,7 +13,7 @@ import java.awt.image.BufferedImage;
 public class GUI extends javax.swing.JFrame {
     
     //Create the constant to be used
-    private Controller controller;
+    private MainGame controller;
 
     /**
      * Creates new form GUI
@@ -23,12 +23,12 @@ public class GUI extends javax.swing.JFrame {
         initComponents();
     }
     
-    public void setController(Controller c){
+    public void setController(MainGame c){
         controller = c;
     }
     
     public void setImage(BufferedImage img){
-       // imagePanel.setImage(img);
+       //image.setImage(img);
         
         
     }
@@ -96,35 +96,33 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * A method to turn left using the left button
+     * @param evt 
+     */
     private void LeftButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LeftButtonActionPerformed
-        // TODO add your handling code here:
-        if(controller.getDirection().equals("N")){
-            controller.turnWest();
-        }else if(controller.getDirection().equals("S")){
-            controller.turnEast();
-        }else if(controller.getDirection().equals("E")){
-            controller.turnNorth();
-        } else if(controller.getDirection().equals("S")){
-            controller.turnSouth();
-        }
+        //the the user can turn left
+        controller.turnLeft();
+        
     }//GEN-LAST:event_LeftButtonActionPerformed
-
+    
+    /**
+     * A method to go forward or go to next location using the forward button
+     * @param evt 
+     */
     private void ForwardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ForwardButtonActionPerformed
-        // TODO add your handling code here:
+        //the user can go forward ot go to next location
         controller.goForward();
     }//GEN-LAST:event_ForwardButtonActionPerformed
 
+    /**
+    * A method to turn right using the right button
+    * @param evt 
+    */
     private void RightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RightButtonActionPerformed
-        // TODO add your handling code here:
-        if(controller.getDirection().equals("N")){
-            controller.turnEast();
-        } else if(controller.getDirection().equals("S")){
-            controller.turnWest();
-            } else if(controller.getDirection().equals("E")){
-                controller.turnSouth();
-            } else if(controller.getDirection().equals("W")){
-                controller.turnNorth();
-            }
+        //the user can turn right
+        controller.turnRight();
+        
     }//GEN-LAST:event_RightButtonActionPerformed
 
     /**
