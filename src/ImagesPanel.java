@@ -25,6 +25,10 @@ public class ImagesPanel extends JComponent {
         }
         }
     
+    /**
+     * Method to set the image on the screen and repaint it
+     * @param img for the Adventure game
+     */
     public void setImage(BufferedImage img){
         //store the image
         this.image = img;
