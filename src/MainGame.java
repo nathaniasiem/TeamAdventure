@@ -49,7 +49,7 @@ public class MainGame {
      */
     public void turnLeft(){
         //if classNum is in out of bounds
-        if(ImageNum > 0)
+       //if(ImageNum > 0)
        
     }
     
