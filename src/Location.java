@@ -20,9 +20,11 @@ public class Location {
     private String[] locationName;
     private String[] locationImage;
     
-    //method to read the text file of locations
+    //method to identify the image with location
     public Location (){
-
+        if (locationName==locationImage){
+            print.screen();
+        }
     }
     
     //call location name
