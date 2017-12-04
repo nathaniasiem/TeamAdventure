@@ -1,10 +1,4 @@
 
-import java.io.FileReader;
-import java.net.URL;
-
-
-
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -19,11 +13,12 @@ public class Location {
     //indicates the location name and image
     private String[] locationName;
     private String[] locationImage;
+    private int ImageNum;
     
     //method to identify the image with location
     public Location (){
         if (locationName==locationImage){
-            print.screen();
+            
         }
     }
     
