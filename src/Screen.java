@@ -13,6 +13,8 @@ public class Screen {
     public String nextLocation;
     public String direction;
     
+    //method to scan in the file
+    
     //method that returns the location of the user
     public String cLocation(String user){
         return currentLocation;
