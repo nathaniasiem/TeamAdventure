@@ -45,7 +45,7 @@ public class Location {
     }
     
     //call the amount of images within a location
-    public int getImageNum(int ImageNum) {
+    public int getImageNum() {
         return this.ImageNum;
     }
     
@@ -56,7 +56,9 @@ public class Location {
     
     //a boolean if the front view is blocked
     public boolean getisBlocked(int position){
-        return locationImage[position].block();
+        return locationImage[position].getblock();
         
     }
+    
+    
 }
