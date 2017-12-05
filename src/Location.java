@@ -34,9 +34,8 @@ public class Location {
         }
     }
        
- 
     //call location name
-    public String Lname(String locateName) {
+    public String Lname() {
         return this.locationName;
     }
 
@@ -46,7 +45,18 @@ public class Location {
     }
     
     //call the amount of images within a location
-    public int numOfImgs(int ImageNum) {
+    public int getImageNum(int ImageNum) {
         return this.ImageNum;
+    }
+    
+    //method to go to the current next location
+    public String nextLocation(int position){
+        return locationImage[position].getNextLocation();
+    }
+    
+    //a boolean if the front view is blocked
+    public boolean getisBlocked(int position){
+        return locationImage[position].block();
+        
     }
 }
