@@ -14,7 +14,7 @@ import javax.swing.JComponent;
  */
 public class ImagesPanel extends JComponent {
     //something to store in the image
-    private BufferedImage image;
+    private BufferedImage image = null;
     
     @Override
     public void paintComponent(Graphics g){
@@ -33,7 +33,7 @@ public class ImagesPanel extends JComponent {
         //store the image
         this.image = img;
         //repaint to draw image
-        repaint();
+        this.repaint();
     }
       
     }
