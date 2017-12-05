@@ -8,6 +8,7 @@
  * @author fabed2976
  */
 public class Screen {
+    public String image;
     public boolean isBlocked;
     public String currentLocation;
     public String nextLocation;
@@ -36,5 +37,9 @@ public class Screen {
     //method to give the next location 
     public String getNextLocation (String nextLocation){
         return nextLocation;
+    }
+    
+    public String getImage(){
+        return this.image;
     }
 }
