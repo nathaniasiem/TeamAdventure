@@ -20,16 +20,19 @@ public class Location {
     private int ImageNum;
 
     //method to identify the image with location
-    public Location() {
-        //created a scanner to scan the file
-       Scanner input = new Scanner (System.in);
+    public Location(Scanner input) {
        //scans for the location name
        locationName = input.nextLine();
        //be able to retrieve the photos within the location
         locationImage = new Screen[4];
         //store the number of images
         ImageNum = 4;
-        //created a loop that goes through each 
+        //created a loop that goes through each image
+        for(int i=0;i<ImageNum;i++){
+            //input is received from screen class due to method in scanning the text file 
+            Screen display = new Screen(input);
+            locationImage[i]=display;
+        }
        
     }
 
