@@ -15,7 +15,11 @@ import java.util.Scanner;
 public class MainGame {
     
      //create an Array list of the location
-    private ArrayList<Location> locations;
+    private ArrayList<Location> locations = new ArrayList<>();
+    
+    
+    private MainGame gui;
+   
     
     public MainGame(){
          //create a blank file reader
@@ -35,21 +39,26 @@ public class MainGame {
         Scanner in = new Scanner(file);
     
         while(in.hasNext()){
-           // Location cur = new Location(in);
-            //locations.add(cur);
-            
-           // gui = new MainGame
+           Location cur = new Location(in);
+           locations.add(cur);
+        }
+           
+        //gui = new GUI (this);
+        //set the text for the next image
+       // Location cur =locations.get(getImageNum);
+        //gui.image(cur.Lname());
+        //show it
+       // gui.setVisible(true);
+    }
         
-    }
-    }
-    
     /**
      * A method to allow the user to go forward 
      */
     public void goForward(){
-        //Location c = screen.get(getNextLocation());
-        //gui.setPictureName(c.Lname());
-        
+        //set the text for the next location
+       // Location cur = locations.get(index);
+        //gui.setImage(cur.Lname());
+
     }
     
     /**
@@ -57,16 +66,8 @@ public class MainGame {
      */
     public void turnLeft(){
         //if classNum is in out of bounds
-       //if(ImageNum > 0 && ImageNum <=4){
-        //turnsleft
-        //ImageNum--;
-    //} else {
-        //ImageNum = 4;
-       //}
-         //Location c = locations.get(getNextLocation());
-        //gui.setPictureName(c.Lname());
-        
-        
+       // if(ImageNum < 4 )
+     
     }
     
     /**
@@ -75,14 +76,14 @@ public class MainGame {
     public void turnRight(){
         //if the number of pictures is out of bounds
         //if classNum is in out of bounds
-       //if(ImageNum >= 0 && ImageNum  < 4){
+      // if(ImageNum >= 0 && ImageNum  < 4){
         //turnsleft
-        //ImageNum++;
-    //} else {
-        //ImageNum = 0;
-       //}
-         //Location c = locations.get(getNextLocation());
-        //gui.setPictureName(c.Lname());
+       // ImageNum++;
+   ///} else {
+      //  ImageNum = 0;
+      // }
+        // Location c = locations.get(getNextLocation());
+       // GUI.setPictureName(c.Lname());
         
         
     }
