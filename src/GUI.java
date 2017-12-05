@@ -15,6 +15,12 @@ public class GUI extends javax.swing.JFrame {
     //Create the constant to be used
     private MainGame controller;
 
+    public GUI (MainGame c){
+        this();
+        controller = c;
+        
+        
+    }
     /**
      * Creates new form GUI
      */
@@ -22,21 +28,18 @@ public class GUI extends javax.swing.JFrame {
     public GUI() {
         initComponents();
     }
-    
-    public GUI (MainGame controller){
-        initComponents();
-        this.controller = controller;
-        
-        
-    }
+ 
     
     public void setController(MainGame c){
         controller = c;
     }
     
     public void setImage(BufferedImage img){
-       //image.setImage(img);
+        //image.setImage(img);
     }
+    
+  
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -90,7 +93,7 @@ public class GUI extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(350, Short.MAX_VALUE)
+                .addGap(350, 350, 350)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LeftButton)
                     .addComponent(ForwardButton)
@@ -100,7 +103,7 @@ public class GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     /**
      * A method to turn left using the left button
      * @param evt 
@@ -128,6 +131,7 @@ public class GUI extends javax.swing.JFrame {
         //the user can turn right
         controller.turnRight();   
     }//GEN-LAST:event_RightButtonActionPerformed
+
 
     /**
      * @param args the command line arguments
