@@ -23,7 +23,7 @@ public class MainGame {
         FileReader file = null;
         try{
             //fix this proper loading later
-            file = new FileReader("images/pics.txt");
+            file = new FileReader("pics.txt");
         }catch(Exception e){
             //print out the error messages
             e.printStackTrace();
@@ -33,14 +33,22 @@ public class MainGame {
         
           //Use a Scanner with the file
         Scanner in = new Scanner(file);
+    
+        while(in.hasNext()){
+           // Location cur = new Location(in);
+            //locations.add(cur);
+            
+           // gui = new MainGame
+        
+    }
     }
     
     /**
      * A method to allow the user to go forward 
      */
     public void goForward(){
-        //Location c = locations.get(getnextLocation());
-        //gui.setPictureName(c.getDescription());
+        //Location c = screen.get(getNextLocation());
+        //gui.setPictureName(c.Lname());
         
     }
     
@@ -49,8 +57,16 @@ public class MainGame {
      */
     public void turnLeft(){
         //if classNum is in out of bounds
-       //if(ImageNum > 0)
-       
+       //if(ImageNum > 0 && ImageNum <=4){
+        //turnsleft
+        //ImageNum--;
+    //} else {
+        //ImageNum = 4;
+       //}
+         //Location c = locations.get(getNextLocation());
+        //gui.setPictureName(c.Lname());
+        
+        
     }
     
     /**
@@ -58,14 +74,19 @@ public class MainGame {
      */
     public void turnRight(){
         //if the number of pictures is out of bounds
+        //if classNum is in out of bounds
+       //if(ImageNum >= 0 && ImageNum  < 4){
+        //turnsleft
+        //ImageNum++;
+    //} else {
+        //ImageNum = 0;
+       //}
+         //Location c = locations.get(getNextLocation());
+        //gui.setPictureName(c.Lname());
+        
+        
     }
     
-    
-       
-           
-        
-    
-
     /**
      * @param args the command line arguments
      */
