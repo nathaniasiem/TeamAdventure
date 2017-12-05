@@ -23,14 +23,19 @@ public class GUI extends javax.swing.JFrame {
         initComponents();
     }
     
+    public GUI (MainGame controller){
+        initComponents();
+        this.controller = controller;
+        
+        
+    }
+    
     public void setController(MainGame c){
         controller = c;
     }
     
     public void setImage(BufferedImage img){
-       //image.setImage(img);
-        
-        
+       image.setImage(img);
     }
 
     /**
@@ -74,13 +79,13 @@ public class GUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(LeftButton, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(132, 132, 132)
+                .addGap(60, 60, 60)
+                .addComponent(LeftButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(116, 116, 116)
                 .addComponent(ForwardButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
-                .addComponent(RightButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68))
+                .addComponent(RightButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,8 +126,7 @@ public class GUI extends javax.swing.JFrame {
     */
     private void RightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RightButtonActionPerformed
         //the user can turn right
-        controller.turnRight();
-        
+        controller.turnRight();   
     }//GEN-LAST:event_RightButtonActionPerformed
 
     /**
