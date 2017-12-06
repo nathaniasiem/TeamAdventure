@@ -17,6 +17,9 @@ public class Screen {
     public String nextLocation;
     public String direction;
     public String nextDirection;
+
+    public String locationName;
+
     
     //method to scan in the file
     public Screen(Scanner input){
@@ -37,16 +40,11 @@ public class Screen {
         }
     }
     //method that returns the location of the user
+
     public String cLocation(String user){
         return currentLocation;
     }
-    
-    //method that identifies if the user is able to move or not
-    
-    public boolean block (){
-        return isBlocked;
-        }   
-    
+ 
     //method that identifies the direction the user is currently facing
     public String getDirection (){
         return direction;
@@ -65,5 +63,17 @@ public class Screen {
     //method to retrieve the image
     public String getImage(){
         return this.image;
+
+    }
+    //method that identifies if the user is able to move or not
+    
+    public boolean getblock (){
+        return isBlocked;
+        }   
+
+    //call location name
+    public String Lname() {
+        return this.locationName;
     }
 }
+

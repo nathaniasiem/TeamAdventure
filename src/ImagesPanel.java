@@ -14,7 +14,7 @@ import javax.swing.JComponent;
  */
 public class ImagesPanel extends JComponent {
     //something to store in the image
-    private BufferedImage image;
+    private BufferedImage image = null;
     
     @Override
     public void paintComponent(Graphics g){
@@ -25,11 +25,15 @@ public class ImagesPanel extends JComponent {
         }
         }
     
+    /**
+     * Method to set the image on the screen and repaint it
+     * @param img for the Adventure game
+     */
     public void setImage(BufferedImage img){
         //store the image
         this.image = img;
         //repaint to draw image
-        repaint();
+        this.repaint();
     }
       
     }
