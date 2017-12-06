@@ -13,14 +13,9 @@ import java.awt.image.BufferedImage;
 public class GUI extends javax.swing.JFrame {
     
     //Create the constant to be used
-    private MainGame controller;
+    private Controller controller;
 
-    public GUI (MainGame c){
-        this();
-        controller = c;
-        
-        
-    }
+ 
     /**
      * Creates new form GUI
      */
@@ -29,13 +24,12 @@ public class GUI extends javax.swing.JFrame {
         initComponents();
     }
  
-    
-    public void setController(MainGame c){
+    public void setController(Controller c){
         controller = c;
     }
     
     public void setImage(BufferedImage img){
-        //image.setImage(img);
+        image.setImage(img);
     }
     
   
