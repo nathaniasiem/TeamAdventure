@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -9,33 +12,50 @@
  */
 public class Controller {
     
-    //create a String variable location
-    private String location;
+    //create a String variable for the current location
+    private String curLocation;
     
-    //create a String variable direction
-    private String direction;
+    //create a String variable  for the current direction
+    private String curDirection;
     
+    //create Gui as a private variable
     private GUI gui;
     
+    //create map as private variable
     private Map map;
     
+    //create a list of all locations as a private variable
+    private ArrayList<Location> locations = new ArrayList<>();
+    
+    //create an array of 4 directions as a private variable
+    private String [] directions;
+    
+    
+    /**
+     * constructor for the controller
+     * @param gui the GUI used in the controller
+     * @param map the map used to store the overall layout of the school
+     */
     public Controller(GUI gui, Map map){
+        //initialize the variables
         this.gui = gui;
         this.map = map;
         
-        this.location = map.getIntialLocation();
-        this.direction = map.getInitialDirection();
+        //initialize the variables
+        this.curLocation = map.getIntialLocation();
+        this.curDirection = map.getInitialDirection();
         
-        // Make sure the GUI can talk to you!
+        //set directon array to have correspomnding spots with each direction
+        directions = new String[]{"N", "E", "S" , "W"};
+        
+        //make sure the GUI can talk to you
         gui.setController(this);
-
-        // Set the starting image
-        //Screen start = map.getScreen(location, direction);
-
-        // Sets image, the the location/direction, and if it is blocked so it can be accessed in gui
-        //gui.setImage(start.getImage());
-        //gui.setScreenLabel();
-       // gui.setBlocked(start.isBlocked());
+        
+        //set the starting location and direction where the user starts
+        Screen start = map.getLocation(curLocation, curDirection);
+        
+        //set the image by usign the new screen
+        gui.setImage(this);
     }
         
         
@@ -45,7 +65,7 @@ public class Controller {
      * @return the location
      */
     public String getLocation(){
-        return location;
+        return curLocation;
     }
     
     /**
@@ -53,90 +73,92 @@ public class Controller {
      * @return the direction
      */
     public String getDirection(){
-        return direction;
+        return curDirection;
     }
     
-    /**
-     * Method to allow the user to turn north 
-     */ 
-    public void turnNorth(){
-        direction = "N";
-        
-        //Screen current = map.getScreen(location, direction);
-        
-        //gui.setImage(current.getImage());
-        //gui.setLabel();
-        //gui.setBlocked(current.isBlocked);
-        
+    
   
-    }
-    
-    /**
-     * Method to allow the user to turn south
-     */
-    public void turnSouth(){
-        direction = "S";
-        //Screen current = map.getScreen(location, direction);
-        
-       //gui.setImage(current.getImage());
-       //gui.setLabel();
-       //gui.setBlocked(current.isBlocked);
-    }
-    
-    /**
-     * Method to allow the user to turn east
-     */
-    public void turnEast(){
-        direction = "E";
-        
-         //Screen current = map.getScreen(location, direction);
-        
-        //gui.setImage(current.getImage());
-        //gui.setLabel();
-        //gui.setBlocked(current.isBlocked);
-
-    }
-    
-    /**
-     * Method to allow the user to turn west
-     */
-    public void turnWest(){
-       direction = "W";
-       
-       
-        //Screen current = map.getScreen(location, direction);
-        
-        //gui.setImage(current.getImage());
-        //gui.setLabel();
-        //gui.setBlocked(current.isBlocked);
-       
-    }
     /**
      * Method to allow the user to go forward
      */
     public void goForward(){
-        // Get the screen we are on right now
-        //Screen current = map.getScreen(location, direction);
+        // Get the current screen we are on right now
+        Screen current = map.getLocation(curLocation, curLirection);
 
         // Switching direction to face the new direction which was clicked
         // Ask if we can move forward
-       // if (current.isBlocked() == false) {
+        if (!current.isBlocked(curDirection) ) {
             // Set new location to the new Name
-           // location = current.getNewImageName();
-
-            // Set new direction
-           // direction = current.getNewDirection();
-
-            // Find new screen
-           // current = map.getScreen(location, direction);
+           curDirection = current.getNextDirection();
         }
+           
+           //Sets the new screen by calling map
+           //Sends is to the new location and Direction
+           Screen newScreen = map.getIntialLocation(curLocation, currentDirection);
+           
+           //sets the image by the new Screen
+           gui.setImage(newScreen.getImage());
 
-        // Sets image, the location/direction, and if it is blocked so it can be accessed in gui
-       // gui.setImage(current.getImage());
-       // gui.setScreenLabel();
-        //gui.setBlocked(current.isBlocked());
+    }
+    
+    /** 
+     * lets the user to turn left of the screen
+     */
+    public void turnLeft(){
+        //create a for loop to got through the direction array comparing to current direction
+        for(int i = 0 ; i < directions.length; i++){
+            if(curDirection.equals(directions[i])){
+                //"N" has exception since it is at position 0, so it will manually set to "W"
+                if(curDirection.equals("N")){
+                    curDirection = "W";
+                    break;
+                } else {
+                    //subtract 1 position from the direction aray to set a new direction
+                    curDirection = directions[i - 1];
+                    break;
+                    
+                }
+            }
+    }
+         //Sets the new screen by calling map
+           //Sends is to the new location and Direction
+           Screen newScreen = map.getIntialLocation(curLocation, curDirection);
+           
+           //sets the image by the new Screen
+           gui.setImage(newScreen.getImage());
+        
         
     }
+    
+    public void turnRight(){
+        //create a for loop to got through the direction array comparing to current direction
+        for(int i = 0 ; i < directions.length; i++){
+            if(curDirection.equals(directions[i])){
+                //"N" has exception since it is at position 0, so it will manually set to "W"
+                if(curDirection.equals("N")){
+                    curDirection = "W";
+                    break;
+                } else {
+                    //subtract 1 position from the direction aray to set a new direction
+                    curDirection = directions[i + 1];
+                    break;
+                    
+                }
+            }
+    }
+         //Sets the new screen by calling map
+           //Sends is to the new location and Direction
+           Screen newScreen = map.getIntialLocation(curLocation, curDirection);
+           
+           //sets the image by the new Screen
+           gui.setImage(newScreen.getImage());
+        
+        
+    }
+        
+    }
+
+
 
 
 
