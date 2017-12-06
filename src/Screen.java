@@ -37,7 +37,7 @@ public class Screen {
         }
     }
     //method that returns the location of the user
-    public String curLocation(String user){
+    public String cLocation(String user){
         return currentLocation;
     }
     
@@ -58,7 +58,7 @@ public class Screen {
     }
     
     //method to give the next location 
-    public String getNextLocation (){
+    public String getNextLocation (String nextLocation){
         return nextLocation;
     }
     
