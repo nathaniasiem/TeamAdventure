@@ -43,7 +43,10 @@ public class Location {
         }
     }
 
-    //call location name
+  /**
+   * Getting the name of the location
+   * @return the location name
+   */
     public String Lname() {
         return this.locationName;
     }
