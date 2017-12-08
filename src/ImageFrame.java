@@ -10,7 +10,7 @@ import java.awt.image.BufferedImage;
  *
  * @author fabed2976
  */
-public class GUI extends javax.swing.JFrame {
+public class ImageFrame extends javax.swing.JFrame {
     
     //Create the constant to be used
     private Controller controller;
@@ -20,17 +20,26 @@ public class GUI extends javax.swing.JFrame {
      * Creates new form GUI
      */
     
-    public GUI() {
+    public ImageFrame() {
         initComponents();
     }
  
+    /**
+     * Sets the controller
+     * @param c to initialize the controller
+     */
     public void setController(Controller c){
         controller = c;
     }
     
+    /**
+     * Use ImagesPanel to et image
+     * @param img the image the screen will be set to
+     */
     public void setImage(BufferedImage img){
-        image.setImage(img);
+        imagesPanel.setImage(img);
     }
+
     
   
     
@@ -47,6 +56,7 @@ public class GUI extends javax.swing.JFrame {
         LeftButton = new javax.swing.JButton();
         ForwardButton = new javax.swing.JButton();
         RightButton = new javax.swing.JButton();
+        imagesPanel = new ImagesPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,18 +86,24 @@ public class GUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(61, 61, 61)
                 .addComponent(LeftButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(116, 116, 116)
+                .addGap(115, 115, 115)
                 .addComponent(ForwardButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
                 .addComponent(RightButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(74, 74, 74))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(imagesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(350, 350, 350)
+                .addContainerGap()
+                .addComponent(imagesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LeftButton)
                     .addComponent(ForwardButton)
@@ -144,20 +160,20 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ImageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ImageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ImageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ImageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUI().setVisible(true);
+                new ImageFrame().setVisible(true);
             }
         });
     }
@@ -165,5 +181,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton ForwardButton;
     private javax.swing.JButton LeftButton;
     private javax.swing.JButton RightButton;
+    private ImagesPanel imagesPanel;
     // End of variables declaration//GEN-END:variables
 }
