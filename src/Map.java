@@ -74,11 +74,11 @@ public class Map {
         return curDirection;
     }
     
-    public Screen getLocation(String loc, String dir){
+    public Screen getLoc(String loc, String dir){
         //go through each screen
         for(Location s: locations){
-            //checks if the name of the locationmatched the locations 
-            if(s.getLocName().equals(loc)){
+            //checks if the name of the location matched the locations 
+            if(s.Lname().equals(loc)){
                 //if it found its macth, asks the method to see if htere is a direction match
                 return s.getScreen(dir);
                 
@@ -90,4 +90,5 @@ public class Map {
     
    
 }
+
 
