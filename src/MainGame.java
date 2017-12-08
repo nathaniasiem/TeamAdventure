@@ -14,9 +14,6 @@ import java.util.Scanner;
  */
 public class MainGame {
     
-     //create an Array list of the location
-    private ArrayList<Location> locations = new ArrayList<>();
-    
     
     private MainGame gui;
    
