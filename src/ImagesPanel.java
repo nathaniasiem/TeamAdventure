@@ -16,6 +16,8 @@ public class ImagesPanel extends JComponent {
     //something to store in the image
     private BufferedImage image = null;
     
+  
+    
     @Override
     public void paintComponent(Graphics g){
         //there is an image to draw
