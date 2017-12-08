@@ -12,17 +12,18 @@ import java.util.Scanner;
  * @author fabed2976
  */
 public class Location {
+
     //created instance variables available throughout program
     //stores images as an array from Screen Class 
     //create an Array list of the location
     private ArrayList<Screen> displays = new ArrayList<>();
-    
+
     //indicates the location name 
     private String locationName;
-    
+
     //stores the directions
     private String[] locationDirection;
-    
+
     //keeps track of the amount of images in location
     private int ImageNum;
 
@@ -42,14 +43,20 @@ public class Location {
             displays.add(display);
         }
     }
+
     //call location name
     public String Lname() {
         return this.locationName;
     }
-    
+
     //create a method 
-    public getScreen(){
-        
+    public Screen getScreen(String direction) {
+        for (Screen display : displays) {
+            if (display.getDirection().equals(direction)) {
+                return display;
+            }
+
+        }
+        return null;
     }
-    
 }

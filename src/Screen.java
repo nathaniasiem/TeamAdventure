@@ -17,20 +17,19 @@ public class Screen {
     public String nextLocation;
     public String direction;
     public String nextDirection;
-
     public String locationName;
 
     
-    //method to scan in the file
+    //method to scan in the file to display image
     public Screen(Scanner input){
         //checks the direction user is facing
         direction = input.next();
         //reads the image name
         image = input.next();
-        //
-        String check = input.next();
+        //reads the indicator if it is true or false
+        String wall = input.next();
         //condition when checking if user is blocked
-        if(check.equals("false")){
+        if(wall.equals("false")){
             isBlocked=false;
             nextLocation = input.next();
             nextDirection = input.next();
@@ -40,7 +39,6 @@ public class Screen {
         }
     }
     //method that returns the location of the user
-
     public String cLocation(String user){
         return currentLocation;
     }
