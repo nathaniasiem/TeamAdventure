@@ -28,7 +28,7 @@ public class MainGame {
         GUI.setVisible(true);
         
         //create the map by loading in the "pics.txt"
-        Map map = new Map("pics.txt");
+        Map map = new Map("images/pics.txt");
         
         //it sets coordinates , and calls the mao as well as the ImageFrame
         Controller c = new Controller (GUI,map);
