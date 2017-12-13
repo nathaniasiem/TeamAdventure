@@ -45,7 +45,7 @@ public class Controller {
         this.curLocation = map.getIntialLocation();
         this.curDirection = map.getInitialDirection();
         
-        //set directon array to have correspomnding spots with each direction
+        //set directon array to have corresponding spots with each direction
         locationDirection= new String[]{"N", "E", "S" , "W"};
      
         //make sure the GUI can talk to you
