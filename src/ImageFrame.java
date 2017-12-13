@@ -33,16 +33,12 @@ public class ImageFrame extends javax.swing.JFrame {
     }
     
     /**
-     * Use ImagesPanel to et image
+     * Use ImagesPanel to set image
      * @param img the image the screen will be set to
      */
     public void setImage(BufferedImage img){
         imagesPanel.setImage(img);
     }
-
-    
-  
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
