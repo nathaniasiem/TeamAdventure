@@ -1,4 +1,5 @@
 
+import java.awt.image.BufferedImage;
 import java.util.Scanner;
 
 /*
@@ -11,13 +12,14 @@ import java.util.Scanner;
  * @author fabed2976
  */
 public class Screen {
-    public String image;
+    public BufferedImage image;
     public boolean isBlocked;
     public String currentLocation;
     public String nextLocation;
     public String direction;
     public String nextDirection;
     public String locationName;
+    public String imageName;
 
     
     //method to scan in the file to display image
@@ -25,7 +27,7 @@ public class Screen {
         //checks the direction user is facing
         direction = input.next();
         //reads the image name
-        image = input.next();
+        imageName = input.next();
         //reads the indicator if it is true or false
         String wall = input.next();
         //condition when checking if user is blocked
@@ -59,13 +61,13 @@ public class Screen {
     }
     
     //method to retrieve the image
-    public String getImage(){
+    public BufferedImage getImage(){
         return this.image;
 
     }
     //method that identifies if the user is able to move or not
-    
-    public boolean getblock (){
+   
+    public boolean getblock (String direction){
         return isBlocked;
         }   
 
