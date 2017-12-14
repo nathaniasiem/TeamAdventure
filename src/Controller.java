@@ -77,7 +77,7 @@ public class Controller {
            Screen newScreen = map.getLoc(curLocation, curDirection);
            
            //sets the image by the new Screen
-           gui.setImage(newScreen.getImage());
+         gui.setImage(newScreen.getImage());
 
     }
     
@@ -105,7 +105,7 @@ public class Controller {
            Screen newScreen = map.getLoc(curLocation, curDirection);
            
            //sets the image by the new Screen
-           gui.setImage(newScreen.getImage());
+          gui.setImage(newScreen.getImage());
         
         
     }
@@ -131,7 +131,7 @@ public class Controller {
            Screen newScreen = map.getLoc(curLocation, curDirection);
            
            //sets the image by the new Screen
-           gui.setImage(newScreen.getImage());
+          gui.setImage(newScreen.getImage());
         
         
     }
