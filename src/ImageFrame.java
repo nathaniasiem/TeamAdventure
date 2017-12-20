@@ -29,7 +29,7 @@ public class ImageFrame extends javax.swing.JFrame {
      * @param c to initialize the controller
      */
     public void setController(Controller c){
-        controller = c;
+        this.controller = c;
     }
     
     /**
