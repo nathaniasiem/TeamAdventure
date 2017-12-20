@@ -73,7 +73,7 @@ public class Controller {
         }
            
            //Sets the new screen by calling map
-           //Sends is to the new location and Direction
+           //Sends it to the new location and Direction
            Screen newScreen = map.getLoc(curLocation, curDirection);
            
            //sets the image by the new Screen
