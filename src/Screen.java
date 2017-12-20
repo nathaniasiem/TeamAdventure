@@ -1,6 +1,8 @@
 
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.Scanner;
+import javax.imageio.ImageIO;
 
 /*
  * To change this template, choose Tools | Templates
@@ -38,6 +40,14 @@ public class Screen {
         }else{
             isBlocked=true;
             input.next();
+        }
+        
+        //loading image on file
+        try{
+            image = ImageIO.read(new File("images/"+imageName));
+        }catch(Exception e){
+            e.printStackTrace();
+            System.exit(0);
         }
     }
     //method that returns the location of the user
